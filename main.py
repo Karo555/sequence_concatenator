@@ -1,6 +1,7 @@
-def main():
-    print("Hello from karo555-repo_name!")
-
+from tkinter import Tk
+from ui.gui import SequenceGUI
 
 if __name__ == "__main__":
-    main()
+    root = Tk()
+    app = SequenceGUI(root)
+    root.mainloop()

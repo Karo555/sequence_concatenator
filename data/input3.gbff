@@ -1,0 +1,17 @@
+LOCUS       TESTSEQ                    6 bp    DNA     linear   PLN 01-JAN-2000
+DEFINITION  Mock gene fragment.
+ACCESSION   TESTSEQ
+VERSION     TESTSEQ.1
+KEYWORDS    .
+SOURCE      Taxon1
+  ORGANISM  Taxon1
+            Synthetic construct.
+FEATURES             Location/Qualifiers
+     source          1..6
+                     /organism="Taxon1"
+                     /mol_type="genomic DNA"
+     gene            1..6
+                     /gene="test"
+ORIGIN      
+        1 aacgtg
+//

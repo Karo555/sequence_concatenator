@@ -7,11 +7,11 @@ def test_merge_sequences():
         {"Taxon2": "TTT", "Taxon3": "AAA"}
     ]
 
-    merged, partitions = merge_sequences(input_dicts, placeholder="-")
+    merged, partitions = merge_sequences(input_dicts, placeholder="?")
 
-    assert merged["Taxon1"] == "AAAGGG---"
-    assert merged["Taxon2"] == "CCC---TTT"
-    assert merged["Taxon3"] == "---TTTAAA"
+    assert merged["Taxon1"] == "AAAGGG???"
+    assert merged["Taxon2"] == "CCC???TTT"
+    assert merged["Taxon3"] == "???TTTAAA"
 
     assert partitions == [
         ("gene1", 1, 3),

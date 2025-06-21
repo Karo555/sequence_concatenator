@@ -1,3 +1,0 @@
-CHARSET gene1 = 1-300;
-CHARSET gene2 = 301-600;
-CHARSET gene1_pos1 = 1-300\3;
