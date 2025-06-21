@@ -1,5 +1,5 @@
 [project]
-name = "sequence_concatenator"
+name = "sequence-concatenator"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
