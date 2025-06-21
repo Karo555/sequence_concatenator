@@ -1,5 +1,5 @@
 from tkinter import Tk
-from ui.gui import SequenceGUI
+from sequence_concatenator.ui.gui import SequenceGUI
 
 if __name__ == "__main__":
     root = Tk()

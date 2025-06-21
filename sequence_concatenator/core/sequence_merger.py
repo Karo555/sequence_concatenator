@@ -1,5 +1,5 @@
 from collections import defaultdict
-from utils.sequence_utils import get_all_taxa, pad_sequence, ensure_consistent_length
+from sequence_concatenator.utils.sequence_utils import get_all_taxa, pad_sequence, ensure_consistent_length
 
 def merge_sequences(sequence_dicts, placeholder="?"):
     """

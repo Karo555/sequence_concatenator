@@ -1,14 +1,15 @@
 import argparse
-from readers.fasta_reader import read_fasta
-from readers.nexus_reader import read_nexus
-from readers.genbank_reader import read_genbank
-from core.sequence_merger import merge_sequences
-from core.partition_generator import generate_partition_file
-from writers.fasta_writer import write_fasta
-from writers.nexus_writer import write_nexus
-from writers.partition_writer import write_partition_file
-from core.stats import compute_alignment_stats
-from utils.file_utils import get_extension
+from sequence_concatenator.readers.fasta_reader import read_fasta
+from sequence_concatenator.readers.nexus_reader import read_nexus
+from sequence_concatenator.readers.genbank_reader import read_genbank
+from sequence_concatenator.core.sequence_merger import merge_sequences
+from sequence_concatenator.core.partition_generator import generate_partition_file
+from sequence_concatenator.writers.fasta_writer import write_fasta
+from sequence_concatenator.writers.nexus_writer import write_nexus
+from sequence_concatenator.writers.partition_writer import write_partition_file
+from sequence_concatenator.core.stats import compute_alignment_stats
+from sequence_concatenator.utils.file_utils import get_extension
+
 
 from pathlib import Path
 

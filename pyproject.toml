@@ -12,10 +12,10 @@ dependencies = [
 ]
 
 [tool.setuptools.packages.find]
-packages = ["sequence_concatenator"]
+include = ["sequence_concatenator*"]
 
 [project.scripts]
-sequencecat = "cli:main"  # CLI entry point
+sequencecat = "sequence_concatenator.cli:main"  # CLI entry point
 
 [build-system]
 requires = ["setuptools", "wheel"]
