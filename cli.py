@@ -1,12 +1,12 @@
 import argparse
-from input.fasta_reader import read_fasta
-from input.nexus_reader import read_nexus
-from input.genbank_reader import read_genbank
+from readers.fasta_reader import read_fasta
+from readers.nexus_reader import read_nexus
+from readers.genbank_reader import read_genbank
 from core.sequence_merger import merge_sequences
 from core.partition_generator import generate_partition_file
-from export.fasta_writer import write_fasta
-from export.nexus_writer import write_nexus
-from export.partition_writer import write_partition_file
+from writers.fasta_writer import write_fasta
+from writers.nexus_writer import write_nexus
+from writers.partition_writer import write_partition_file
 from core.stats import compute_alignment_stats
 from utils.file_utils import get_extension
 
