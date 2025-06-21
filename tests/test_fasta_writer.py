@@ -21,8 +21,8 @@ def test_write_fasta():
 
     print("fasta_writer passed ✔️")
 
-    # Cleanup
-    os.remove(output_file)
+    # # Cleanup
+    # os.remove(output_file)
 
 if __name__ == "__main__":
     test_write_fasta()
