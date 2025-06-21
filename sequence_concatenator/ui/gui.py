@@ -63,6 +63,29 @@ class SequenceGUI:
         self.stats_text = tk.Text(self.root, height=12, width=60)
         self.stats_text.pack(pady=10)
 
+    def remove_selected_file(self):
+        """Remove the selected file from the loaded files list"""
+        selection = self.files_listbox.curselection()
+        if not selection:
+            messagebox.showwarning("No Selection", "Please select a file to remove.")
+            return
+        
+        # Get the selected index
+        selected_index = selection[0]
+        
+        # Remove from both lists
+        removed_file = os.path.basename(self.loaded_files[selected_index])
+        del self.sequence_dicts[selected_index]
+        del self.loaded_files[selected_index]
+        
+        # Update display
+        self.update_files_display()
+        self.status_label.config(text=f"Removed: {removed_file}", fg="blue")
+        
+        # Clear stats if no files left
+        if not self.loaded_files:
+            self.stats_text.delete(1.0, tk.END)
+
     def update_status(self, message, is_working=False):
         """Update status label and progress bar"""
         self.status_label.config(text=message, fg="blue" if is_working else "green")

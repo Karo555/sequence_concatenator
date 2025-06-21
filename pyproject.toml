@@ -1,5 +1,5 @@
 [project]
-name = "python_template"
+name = "sequence_concatenator"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -7,8 +7,16 @@ requires-python = ">=3.9"
 dependencies = [
     "fastapi>=0.115.12",
      "biopython",
-     "pytest"
+     "pytest",
+     "tk" 
 ]
 
 [tool.setuptools.packages.find]
-include = ["core*", "ui*", "input*", "export*"]
+packages = ["sequence_concatenator"]
+
+[project.scripts]
+sequencecat = "cli:main"  # CLI entry point
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
