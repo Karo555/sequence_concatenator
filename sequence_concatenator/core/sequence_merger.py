@@ -1,5 +1,5 @@
 from collections import defaultdict
-from sequence_concatenator.utils.sequence_utils import get_all_taxa, pad_sequence, ensure_consistent_length
+from sequence_concatenator.utils.sequence_utils import get_all_taxa, pad_sequence
 
 def merge_sequences(sequence_dicts, placeholder="?"):
     """
@@ -20,18 +20,14 @@ def merge_sequences(sequence_dicts, placeholder="?"):
 
     start = 1
     for idx, seq_dict in enumerate(sequence_dicts):
-        ensure_consistent_length(seq_dict)
-        gene_len = len(next(iter(seq_dict.values())))
+        gene_len = max(len(seq) for seq in seq_dict.values()) if seq_dict else 0
         end = start + gene_len - 1
         label = f"gene{idx+1}"
 
         for taxon in all_taxa:
-            seq = seq_dict.get(taxon)
-            if seq is None:
-                seq = placeholder * gene_len
-            else:
-                seq = pad_sequence(seq, gene_len, filler=placeholder)
-            merged[taxon] += seq
+            seq = seq_dict.get(taxon, "")
+            padded_seq = pad_sequence(seq, gene_len, filler=placeholder)
+            merged[taxon] += padded_seq
 
         partitions.append((label, start, end))
         start = end + 1

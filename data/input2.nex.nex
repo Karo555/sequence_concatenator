@@ -1,0 +1,17 @@
+#NEXUS
+
+Begin data;
+  Dimensions ntax=2 nchar=6;
+  Format datatype=dna missing=? gap=-;
+  Matrix
+Taxon1          ATGCCG
+Taxon2          ATGCC-
+  ;
+End;
+
+Begin assumptions;
+CHARSET gene1 = 1-6;
+CHARSET gene1_pos1 = 1-6\3;
+CHARSET gene1_pos2 = 2-6\3;
+CHARSET gene1_pos3 = 3-6\3;
+End;

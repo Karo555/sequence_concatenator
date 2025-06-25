@@ -3,7 +3,7 @@ Begin data;
 Dimensions ntax=2 nchar=6;
 Format datatype=dna missing=? gap=-;
 Matrix
-Taxon1  TTG-CA
-Taxon2  TTGTCA
+Taxon1  TTG-
+Taxon2  TTGT
 ;
 End;

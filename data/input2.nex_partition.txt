@@ -1,0 +1,4 @@
+CHARSET gene1 = 1-6;
+CHARSET gene1_pos1 = 1-6\3;
+CHARSET gene1_pos2 = 2-6\3;
+CHARSET gene1_pos3 = 3-6\3;

@@ -8,7 +8,9 @@ dependencies = [
     "fastapi>=0.115.12",
      "biopython",
      "pytest",
-     "tk" 
+     "tk" ,
+     "matplotlib",
+     "fpdf"
 ]
 
 [tool.setuptools.packages.find]
